@@ -1,0 +1,184 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      2838,        110]*)
+(*NotebookOutlinePosition[      4178,        155]*)
+(*  CellTagsIndexPosition[      4111,        149]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Im", "ObjectName",
+  CellTags->"Im"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  Cell[BoxData[
+      StyleBox[\(Im[q]\),
+        "Program"]]],
+  "extracts the complex part of a quaternion ",
+  StyleBox["q", "Program"],
+  "."
+}], "Usage",
+  CellTags->"Im"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["q", "Program"],
+  " is a quaternion."
+}], "Notes",
+  CellTags->"Im"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] See also: ",
+  ButtonBox["Re",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["i",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["j",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["k",
+    ButtonStyle->"RefGuideLink"],
+  "."
+}], "Notes",
+  CellTags->"Im"],
+
+Cell[CellGroupData[{
+
+Cell["Further Examples", "ExampleSection",
+  CellTags->"Im"],
+
+Cell[TextData[{
+  StyleBox["See",
+    FontSlant->"Italic"],
+  " ",
+  ButtonBox["Re",
+    ButtonStyle->"RefGuideLink"],
+  " ",
+  StyleBox["of this help for futher examples.",
+    FontSlant->"Italic"]
+}], "ExampleText",
+  CellTags->"Im"]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 722}},
+ShowPageBreaks->False,
+WindowSize->{752, 602},
+WindowMargins->{{164, Automatic}, {Automatic, 43}},
+PrintingStartingPageNumber->18,
+TaggingRules:>{"PaginationCache" -> {{2007, 5, 21, 18, 1, \
+20.234375`9.058664729042743}, {18, 18, 18, 18, 18, 18}, Automatic}},
+ShowCellTags->True,
+Magnification->1,
+StyleDefinitions -> "HelpBrowser.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{
+  "Im"->{
+    Cell[1776, 53, 42, 1, 55, "ObjectName",
+      CellTags->"Im"],
+    Cell[1821, 56, 219, 9, 47, "Usage",
+      CellTags->"Im"],
+    Cell[2043, 67, 123, 5, 39, "Notes",
+      CellTags->"Im"],
+    Cell[2169, 74, 318, 15, 39, "Notes",
+      CellTags->"Im"],
+    Cell[2512, 93, 60, 1, 53, "ExampleSection",
+      CellTags->"Im"],
+    Cell[2575, 96, 235, 10, 49, "ExampleText",
+      CellTags->"Im"]}
+  }
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{
+  {"Im", 3687, 132}
+  }
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 42, 1, 55, "ObjectName",
+  CellTags->"Im"],
+Cell[1821, 56, 219, 9, 47, "Usage",
+  CellTags->"Im"],
+Cell[2043, 67, 123, 5, 39, "Notes",
+  CellTags->"Im"],
+Cell[2169, 74, 318, 15, 39, "Notes",
+  CellTags->"Im"],
+
+Cell[CellGroupData[{
+Cell[2512, 93, 60, 1, 53, "ExampleSection",
+  CellTags->"Im"],
+Cell[2575, 96, 235, 10, 49, "ExampleText",
+  CellTags->"Im"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

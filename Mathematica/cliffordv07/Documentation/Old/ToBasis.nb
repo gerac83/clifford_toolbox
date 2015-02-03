@@ -1,0 +1,275 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      4225,        163]*)
+(*NotebookOutlinePosition[      6177,        224]*)
+(*  CellTagsIndexPosition[      6105,        218]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["ToBasis", "Program"]], "ObjectName",
+  CellTags->"ToBasis"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  Cell[BoxData[
+      StyleBox[\(ToBasis[v]\),
+        "Program"]]],
+  " transforms a vector from the ",
+  StyleBox["Mathematica",
+    FontSlant->"Italic"],
+  " notation (list) to a linear combination of vectors ",
+  StyleBox["e[i]", "Program"],
+  "."
+}], "Usage",
+  CellTags->"ToBasis"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["v", "Program"],
+  " is a vector given in standard notation (list)."
+}], "Notes",
+  CellTags->"ToBasis"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["ToBasis", "Program"],
+  " returns a vector in the canonical basis ",
+  StyleBox["e[i]", "Program"],
+  "."
+}], "Notes",
+  CellTags->"ToBasis"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] See also: ",
+  ButtonBox["ToVector",
+    ButtonStyle->"RefGuideLink"],
+  "."
+}], "Notes",
+  CellTags->"ToBasis"],
+
+Cell[CellGroupData[{
+
+Cell["Further Examples", "ExampleSection",
+  CellTags->"ToBasis"],
+
+Cell["This loads the package of Clifford Algebras.", "ExampleText",
+  CellTags->"ToBasis"],
+
+Cell[BoxData[
+    \(<< "\<clifford.m\>"\)], "Input",
+  CellLabel->"In[1]:=",
+  CellTags->"ToBasis"],
+
+Cell[TextData[{
+  "This transforms a given vector (list) to a linear combination in the \
+canonical basis ",
+  StyleBox["e[i]", "Program"],
+  "."
+}], "ExampleText",
+  CellTags->"ToBasis"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(v = {10, 2, 4, 7};\)\), "\[IndentingNewLine]", 
+    \(v = ToBasis[v]\)}], "Input",
+  CellLabel->"In[2]:=",
+  CellTags->"ToBasis"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{"10", " ", 
+        TagBox[\(e\_1\),
+          DisplayForm]}], "+", 
+      RowBox[{"2", " ", 
+        TagBox[\(e\_2\),
+          DisplayForm]}], "+", 
+      RowBox[{"4", " ", 
+        TagBox[\(e\_3\),
+          DisplayForm]}], "+", 
+      RowBox[{"7", " ", 
+        TagBox[\(e\_4\),
+          DisplayForm]}]}]], "Output",
+  CellLabel->"Out[3]=",
+  CellTags->"ToBasis"]
+}, Open  ]],
+
+Cell[TextData[{
+  "Here, it is changed the last vector from the canonical basis ",
+  StyleBox["e[i]", "Program"],
+  " to the standard notation."
+}], "ExampleText",
+  CellTags->"ToBasis"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(ToVector[v]\)], "Input",
+  CellLabel->"In[4]:=",
+  CellTags->"ToBasis"],
+
+Cell[BoxData[
+    \({10, 2, 4, 7}\)], "Output",
+  CellLabel->"Out[4]=",
+  CellTags->"ToBasis"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 722}},
+ShowPageBreaks->False,
+WindowSize->{638, 635},
+WindowMargins->{{Automatic, 301}, {19, Automatic}},
+PrintingStartingPageNumber->45,
+TaggingRules:>{"PaginationCache" -> {{2007, 5, 21, 18, 1, \
+25.125`9.152680991400256}, {45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, \
+45, 45}, Automatic}},
+Magnification->1,
+StyleDefinitions -> "HelpBrowser.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{
+  "ToBasis"->{
+    Cell[1776, 53, 83, 1, 41, "ObjectName",
+      CellTags->"ToBasis"],
+    Cell[1862, 56, 330, 12, 33, "Usage",
+      CellTags->"ToBasis"],
+    Cell[2195, 70, 158, 5, 25, "Notes",
+      CellTags->"ToBasis"],
+    Cell[2356, 77, 196, 7, 25, "Notes",
+      CellTags->"ToBasis"],
+    Cell[2555, 86, 152, 6, 25, "Notes",
+      CellTags->"ToBasis"],
+    Cell[2732, 96, 65, 1, 39, "ExampleSection",
+      CellTags->"ToBasis"],
+    Cell[2800, 99, 90, 1, 35, "ExampleText",
+      CellTags->"ToBasis"],
+    Cell[2893, 102, 99, 3, 29, "Input",
+      CellTags->"ToBasis"],
+    Cell[2995, 107, 187, 6, 35, "ExampleText",
+      CellTags->"ToBasis"],
+    Cell[3207, 117, 152, 4, 49, "Input",
+      CellTags->"ToBasis"],
+    Cell[3362, 123, 409, 15, 27, "Output",
+      CellTags->"ToBasis"],
+    Cell[3786, 141, 186, 5, 35, "ExampleText",
+      CellTags->"ToBasis"],
+    Cell[3997, 150, 91, 3, 29, "Input",
+      CellTags->"ToBasis"],
+    Cell[4091, 155, 94, 3, 27, "Output",
+      CellTags->"ToBasis"]}
+  }
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{
+  {"ToBasis", 5090, 185}
+  }
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 83, 1, 41, "ObjectName",
+  CellTags->"ToBasis"],
+Cell[1862, 56, 330, 12, 33, "Usage",
+  CellTags->"ToBasis"],
+Cell[2195, 70, 158, 5, 25, "Notes",
+  CellTags->"ToBasis"],
+Cell[2356, 77, 196, 7, 25, "Notes",
+  CellTags->"ToBasis"],
+Cell[2555, 86, 152, 6, 25, "Notes",
+  CellTags->"ToBasis"],
+
+Cell[CellGroupData[{
+Cell[2732, 96, 65, 1, 39, "ExampleSection",
+  CellTags->"ToBasis"],
+Cell[2800, 99, 90, 1, 35, "ExampleText",
+  CellTags->"ToBasis"],
+Cell[2893, 102, 99, 3, 29, "Input",
+  CellTags->"ToBasis"],
+Cell[2995, 107, 187, 6, 35, "ExampleText",
+  CellTags->"ToBasis"],
+
+Cell[CellGroupData[{
+Cell[3207, 117, 152, 4, 49, "Input",
+  CellTags->"ToBasis"],
+Cell[3362, 123, 409, 15, 27, "Output",
+  CellTags->"ToBasis"]
+}, Open  ]],
+Cell[3786, 141, 186, 5, 35, "ExampleText",
+  CellTags->"ToBasis"],
+
+Cell[CellGroupData[{
+Cell[3997, 150, 91, 3, 29, "Input",
+  CellTags->"ToBasis"],
+Cell[4091, 155, 94, 3, 27, "Output",
+  CellTags->"ToBasis"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

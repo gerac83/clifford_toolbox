@@ -1,0 +1,225 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      3549,        128]*)
+(*NotebookOutlinePosition[      5412,        183]*)
+(*  CellTagsIndexPosition[      5330,        177]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["QuaternionInverse", "Program"]], "ObjectName",
+  CellTags->"QuaternionInverse"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  Cell[BoxData[
+      StyleBox[\(QuaternionInverse[q]\),
+        "Program"]]],
+  " calculates the inverse of the quaternion ",
+  StyleBox["q", "Program"],
+  "."
+}], "Usage",
+  CellTags->"QuaternionInverse"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["q", "Program"],
+  " is a quaternion."
+}], "Notes",
+  CellTags->"QuaternionInverse"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["QuaternionInverse", "Program"],
+  " returns a quaternion."
+}], "Notes",
+  CellTags->"QuaternionInverse"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] See also: ",
+  ButtonBox["QuaternionConjugate",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["QuaternionMagnitude",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["QuaternionProduct",
+    ButtonStyle->"RefGuideLink"],
+  "."
+}], "Notes",
+  CellTags->"QuaternionInverse"],
+
+Cell[CellGroupData[{
+
+Cell["Further Examples", "ExampleSection",
+  CellTags->"QuaternionInverse"],
+
+Cell["This loads the package of Clifford Algebras.", "ExampleText",
+  CellTags->"QuaternionInverse"],
+
+Cell[BoxData[
+    \(<< "\<clifford.m\>"\)], "Input",
+  CellLabel->"In[1]:=",
+  CellTags->"QuaternionInverse"],
+
+Cell["This evaluates the inverse of a quaternion.", "ExampleText",
+  CellTags->"QuaternionInverse"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    RowBox[{
+      StyleBox["QuaternionInverse",
+        "Program"], "[", \(a + i + j + k\), "]"}]], "Input",
+  CellLabel->"In[2]:=",
+  CellTags->"QuaternionInverse"],
+
+Cell[BoxData[
+    \(\(a - i - j - k\)\/\(3 + a\^2\)\)], "Output",
+  CellLabel->"Out[2]=",
+  CellTags->"QuaternionInverse"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 722}},
+ShowPageBreaks->False,
+WindowSize->{752, 602},
+WindowMargins->{{150, Automatic}, {42, Automatic}},
+PrintingStartingPageNumber->31,
+TaggingRules:>{"PaginationCache" -> {{2007, 5, 21, 18, 1, \
+23.140625`9.116950010964091}, {31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31}, \
+Automatic}},
+Magnification->1,
+StyleDefinitions -> "HelpBrowser.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{
+  "QuaternionInverse"->{
+    Cell[1776, 53, 103, 1, 41, "ObjectName",
+      CellTags->"QuaternionInverse"],
+    Cell[1882, 56, 249, 9, 33, "Usage",
+      CellTags->"QuaternionInverse"],
+    Cell[2134, 67, 138, 5, 25, "Notes",
+      CellTags->"QuaternionInverse"],
+    Cell[2275, 74, 159, 5, 25, "Notes",
+      CellTags->"QuaternionInverse"],
+    Cell[2437, 81, 325, 12, 25, "Notes",
+      CellTags->"QuaternionInverse"],
+    Cell[2787, 97, 75, 1, 39, "ExampleSection",
+      CellTags->"QuaternionInverse"],
+    Cell[2865, 100, 100, 1, 35, "ExampleText",
+      CellTags->"QuaternionInverse"],
+    Cell[2968, 103, 109, 3, 29, "Input",
+      CellTags->"QuaternionInverse"],
+    Cell[3080, 108, 99, 1, 35, "ExampleText",
+      CellTags->"QuaternionInverse"],
+    Cell[3204, 113, 180, 5, 29, "Input",
+      CellTags->"QuaternionInverse"],
+    Cell[3387, 120, 122, 3, 40, "Output",
+      CellTags->"QuaternionInverse"]}
+  }
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{
+  {"QuaternionInverse", 4415, 150}
+  }
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 103, 1, 41, "ObjectName",
+  CellTags->"QuaternionInverse"],
+Cell[1882, 56, 249, 9, 33, "Usage",
+  CellTags->"QuaternionInverse"],
+Cell[2134, 67, 138, 5, 25, "Notes",
+  CellTags->"QuaternionInverse"],
+Cell[2275, 74, 159, 5, 25, "Notes",
+  CellTags->"QuaternionInverse"],
+Cell[2437, 81, 325, 12, 25, "Notes",
+  CellTags->"QuaternionInverse"],
+
+Cell[CellGroupData[{
+Cell[2787, 97, 75, 1, 39, "ExampleSection",
+  CellTags->"QuaternionInverse"],
+Cell[2865, 100, 100, 1, 35, "ExampleText",
+  CellTags->"QuaternionInverse"],
+Cell[2968, 103, 109, 3, 29, "Input",
+  CellTags->"QuaternionInverse"],
+Cell[3080, 108, 99, 1, 35, "ExampleText",
+  CellTags->"QuaternionInverse"],
+
+Cell[CellGroupData[{
+Cell[3204, 113, 180, 5, 29, "Input",
+  CellTags->"QuaternionInverse"],
+Cell[3387, 120, 122, 3, 40, "Output",
+  CellTags->"QuaternionInverse"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

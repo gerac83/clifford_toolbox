@@ -1,0 +1,72 @@
+First version (1996): J.L. Aragon and O. Caballero
+
+First revised version (1997): J.L. Aragon
+	Changes:
+		-MultivectorInverse.
+	        -Subscripted -> SubscriptBox
+		-Aliases discarded
+	New:
+        	-Format 
+        	-Palette
+			
+Version 0.1 (2007): G. Aragon-Camarasa
+	New:
+		-GADraw function.
+		-Improved Palette.
+		-Help entries for Mathematica 6.0
+
+Version 0.2 (Oct,2007): G. Aragon-Camarasa, J.L. Aragon
+	Changes:
+		-Updated GADraw function
+		-Projection error fixed
+
+Version 0.3 (Oct,2008): J.L. Aragon
+	Changes:
+		-geoprod was changed to GeometricProduct and rewitten
+		-Projection is a function of Mathematica 6.0: Projection -> CProjection
+
+Version 0.3 (Oct,2009): J.L. Aragon
+	Changes:
+		-Grade modified
+
+Version 0.4 (Jan,2010): J.L. Aragon
+	Changes:
+		-Function bilinearform is modified to handle degenerate cases.
+    
+Version 0.5 (Aug,2010): G. Aragon-Camarasa
+	Changes:
+		-License included
+		-New version number convention
+    		-Updated Grade, InnerProduct & OuterProduct in accordance to a more stable version (v. 0.3)
+		-GADraw not available (Mathematica 7 incompatibility)
+    
+Version 0.6 (Sep,2010): G. Aragon-Camarasa
+	Changes:
+		-GeometricProduct is now compatible with Mathematica 7 (changes in v.0.3 has been reverted
+	 	to the original form and included a new set delayed rule for expansion and simplification)
+		-Bug corrected on the MultivectorInverse function. The bug was a simplification
+	 	and expansion on the variables in the GeometricProduct function
+		-Grade has been changed. Mathematica 7 introduced an incompatibility in the If statement,
+	 	now instead of the \[Equal] is SameQ. This seems to correct the problem.
+		 
+Version 0.7 (Mar,2011): G. Aragon-Camarasa
+	Changes:
+		-Chop function integrated in GeometricProduct, InnerProduct, OuterProduct and ToBasis. It
+		 seems to solve problems while doing numeric computations.
+		-Bug on MultivectorInverse (not returning the inverse of the multivector due to numeric
+		 inconsistencies) seems to be solved with the above solution. Also Chop at the output of
+		 the function intercepts numerical errors.
+		-$SetEpsilon option included. This is used to "chop" values below $SetEpsilon.
+		-New functions integrated, kindly provided by Charles Gunn. They have beed modified to suit
+		 the format and notation of the package (e.g. Polarize function not used, left original Dual)
+			*PointToBasis
+			*PointFromBasis
+			*RegressiveProduct
+			*Dualize
+		-Added extra line to match bilinearform of Charles Gunn implementation for future implementations; 
+		 case e[i]*e[i] = 0.
+
+
+---------
+GARotation
+

@@ -1,0 +1,227 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      3939,        138]*)
+(*NotebookOutlinePosition[      5498,        189]*)
+(*  CellTagsIndexPosition[      5429,        183]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["e[i]", "ObjectName",
+  CellTags->"e[i]"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  Cell[BoxData[
+      \(e[i]\)]],
+  "is used to denote the elements of the canonical basis of Euclidean vector \
+space where the Clifford Algebra is defined."
+}], "Notes",
+  CellTags->"e[i]"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["e[i]", "Program"],
+  " is used as i-th basis element",
+  StyleBox[".", "Text"]
+}], "Notes",
+  CellTags->"e[i]"],
+
+Cell[CellGroupData[{
+
+Cell["Further Examples", "ExampleSection",
+  CellTags->"e[i]"],
+
+Cell["This loads the package of Clifford Algebras.", "ExampleText",
+  CellTags->"e[i]"],
+
+Cell[BoxData[
+    \(<< "\<clifford.m\>"\)], "Input",
+  CellLabel->"In[1]:=",
+  CellTags->"e[i]"],
+
+Cell["\<\
+This evaluates the GeometricProduct of two vectors in the canonical basis.\
+\>", "ExampleText",
+  CellTags->"e[i]"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(v = x*e[1] + y*e[2] + z*e[3];\)\), "\[IndentingNewLine]", 
+    \(\(w = s*e[1] + t*e[2] + u*e[3];\)\), "\[IndentingNewLine]", 
+    \(GeometricProduct[v, w]\)}], "Input",
+  CellLabel->"In[2]:=",
+  CellTags->"e[i]"],
+
+Cell[BoxData[
+    RowBox[{\(s\ x\), "+", \(t\ y\), "+", \(u\ z\), "+", 
+      RowBox[{"t", " ", "x", " ", 
+        TagBox[\(e\_1\),
+          DisplayForm], " ", 
+        TagBox[\(e\_2\),
+          DisplayForm]}], "-", 
+      RowBox[{"s", " ", "y", " ", 
+        TagBox[\(e\_1\),
+          DisplayForm], " ", 
+        TagBox[\(e\_2\),
+          DisplayForm]}], "+", 
+      RowBox[{"u", " ", "x", " ", 
+        TagBox[\(e\_1\),
+          DisplayForm], " ", 
+        TagBox[\(e\_3\),
+          DisplayForm]}], "-", 
+      RowBox[{"s", " ", "z", " ", 
+        TagBox[\(e\_1\),
+          DisplayForm], " ", 
+        TagBox[\(e\_3\),
+          DisplayForm]}], "+", 
+      RowBox[{"u", " ", "y", " ", 
+        TagBox[\(e\_2\),
+          DisplayForm], " ", 
+        TagBox[\(e\_3\),
+          DisplayForm]}], "-", 
+      RowBox[{"t", " ", "z", " ", 
+        TagBox[\(e\_2\),
+          DisplayForm], " ", 
+        TagBox[\(e\_3\),
+          DisplayForm]}]}]], "Output",
+  CellLabel->"Out[4]=",
+  CellTags->"e[i]"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 722}},
+ShowPageBreaks->False,
+WindowSize->{752, 602},
+WindowMargins->{{117, Automatic}, {39, Automatic}},
+PrintingStartingPageNumber->3,
+TaggingRules:>{"PaginationCache" -> {{2007, 5, 21, 18, 1, \
+17.140625`8.986601596382771}, {3, 3, 3, 3, 3, 3, 3, 3, 3}, Automatic}},
+ShowCellTags->True,
+Magnification->1,
+StyleDefinitions -> "HelpBrowser.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{
+  "e[i]"->{
+    Cell[1776, 53, 46, 1, 55, "ObjectName",
+      CellTags->"e[i]"],
+    Cell[1825, 56, 234, 7, 39, "Notes",
+      CellTags->"e[i]"],
+    Cell[2062, 65, 166, 6, 39, "Notes",
+      CellTags->"e[i]"],
+    Cell[2253, 75, 62, 1, 53, "ExampleSection",
+      CellTags->"e[i]"],
+    Cell[2318, 78, 87, 1, 49, "ExampleText",
+      CellTags->"e[i]"],
+    Cell[2408, 81, 96, 3, 43, "Input",
+      CellTags->"e[i]"],
+    Cell[2507, 86, 125, 3, 49, "ExampleText",
+      CellTags->"e[i]"],
+    Cell[2657, 93, 235, 5, 83, "Input",
+      CellTags->"e[i]"],
+    Cell[2895, 100, 1004, 33, 41, "Output",
+      CellTags->"e[i]"]}
+  }
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{
+  {"e[i]", 4792, 160}
+  }
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 46, 1, 55, "ObjectName",
+  CellTags->"e[i]"],
+Cell[1825, 56, 234, 7, 39, "Notes",
+  CellTags->"e[i]"],
+Cell[2062, 65, 166, 6, 39, "Notes",
+  CellTags->"e[i]"],
+
+Cell[CellGroupData[{
+Cell[2253, 75, 62, 1, 53, "ExampleSection",
+  CellTags->"e[i]"],
+Cell[2318, 78, 87, 1, 49, "ExampleText",
+  CellTags->"e[i]"],
+Cell[2408, 81, 96, 3, 43, "Input",
+  CellTags->"e[i]"],
+Cell[2507, 86, 125, 3, 49, "ExampleText",
+  CellTags->"e[i]"],
+
+Cell[CellGroupData[{
+Cell[2657, 93, 235, 5, 83, "Input",
+  CellTags->"e[i]"],
+Cell[2895, 100, 1004, 33, 41, "Output",
+  CellTags->"e[i]"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

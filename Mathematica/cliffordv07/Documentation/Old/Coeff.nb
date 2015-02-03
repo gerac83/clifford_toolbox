@@ -1,0 +1,363 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      5105,        217]*)
+(*NotebookOutlinePosition[      7515,        292]*)
+(*  CellTagsIndexPosition[      7445,        286]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Coeff", "ObjectName",
+  CellTags->"Coeff"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  Cell[BoxData[
+      RowBox[{"Coeff", 
+        StyleBox["[",
+          "MR"], 
+        StyleBox[\(m, b\),
+          "MR"], 
+        StyleBox["]",
+          "MR"]}]]],
+  "extracts the coefficient of the blade ",
+  StyleBox["b", "Program"],
+  " in the multivector ",
+  StyleBox["m", "Program"],
+  "."
+}], "Usage",
+  CellTags->"Coeff"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] The multivector ",
+  StyleBox["m", "Program"],
+  " must be in the canonical basis ",
+  StyleBox["e[i]", "Program"],
+  " of Clifford Algebra."
+}], "Notes",
+  CellTags->"Coeff"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["b", "Program"],
+  " is a blade of grade and ",
+  StyleBox["m", "Program"],
+  " is a multivector."
+}], "Notes",
+  CellTags->"Coeff"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] See also: ",
+  ButtonBox["Dual",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["Grade",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["Magnitude",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["ToBasis",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["ToVector",
+    ButtonStyle->"RefGuideLink"],
+  "."
+}], "Notes",
+  CellTags->"Coeff"],
+
+Cell[CellGroupData[{
+
+Cell["Further Examples", "ExampleSection",
+  CellTags->"Coeff"],
+
+Cell["This loads the package of Clifford Algebras.", "ExampleText",
+  CellTags->"Coeff"],
+
+Cell[BoxData[
+    \(<< "\<clifford.m\>"\)], "Input",
+  CellLabel->"In[1]:=",
+  CellTags->"Coeff"],
+
+Cell[TextData[{
+  "This defines a multivector ",
+  StyleBox["v", "Program"],
+  "."
+}], "ExampleText",
+  CellTags->"Coeff"],
+
+Cell[BoxData[
+    \(\(v = 10*e[1] + 2*e[4] + 4*e[2]*e[5] + 7*e[1]*e[3];\)\)], "Input",
+  CellLabel->"In[2]:=",
+  CellTags->"Coeff"],
+
+Cell[TextData[{
+  "To extract the coefficient of the blade ",
+  StyleBox["e[1]", "Program"],
+  ", thus;"
+}], "ExampleText",
+  CellTags->"Coeff"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Coeff[v, e[1]]\)], "Input",
+  CellLabel->"In[3]:=",
+  CellTags->"Coeff"],
+
+Cell[BoxData[
+    \(10\)], "Output",
+  CellLabel->"Out[3]=",
+  GeneratedCell->False,
+  CellAutoOverwrite->False,
+  CellTags->"Coeff"]
+}, Open  ]],
+
+Cell[TextData[{
+  "The coefficients for the blade ",
+  StyleBox["e[2]e[5]", "Program"],
+  " is;"
+}], "ExampleText",
+  CellTags->"Coeff"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Coeff[v, e[2]*e[5]]\)], "Input",
+  CellLabel->"In[4]:=",
+  CellTags->"Coeff"],
+
+Cell[BoxData[
+    \(4\)], "Output",
+  CellLabel->"Out[4]=",
+  GeneratedCell->False,
+  CellAutoOverwrite->False,
+  CellTags->"Coeff"]
+}, Open  ]],
+
+Cell["Also, it is possible to extract symbolic coefficients.", "ExampleText",
+  CellTags->"Coeff"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(v = a*e[1] + b*e[1]*e[2];\)\), "\[IndentingNewLine]", 
+    \(Coeff[v, e[1]]\)}], "Input",
+  CellLabel->"In[5]:=",
+  CellTags->"Coeff"],
+
+Cell[BoxData[
+    \(a\)], "Output",
+  CellLabel->"Out[6]=",
+  GeneratedCell->False,
+  CellAutoOverwrite->False,
+  CellTags->"Coeff"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Coeff[v, e[1]*e[2]]\)], "Input",
+  CellLabel->"In[7]:=",
+  CellTags->"Coeff"],
+
+Cell[BoxData[
+    \(b\)], "Output",
+  CellLabel->"Out[7]=",
+  GeneratedCell->False,
+  CellAutoOverwrite->False,
+  CellTags->"Coeff"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 722}},
+ShowPageBreaks->False,
+WindowSize->{752, 602},
+WindowMargins->{{143, Automatic}, {Automatic, 25}},
+PrintingStartingPageNumber->1,
+TaggingRules:>{"PaginationCache" -> {{2007, 5, 21, 18, 1, \
+16.484375`8.9696474311693}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, \
+1, 1, 1, 1, 1}, Automatic}},
+Magnification->1,
+StyleDefinitions -> "HelpBrowser.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{
+  "Coeff"->{
+    Cell[1776, 53, 48, 1, 41, "ObjectName",
+      CellTags->"Coeff"],
+    Cell[1827, 56, 376, 16, 33, "Usage",
+      CellTags->"Coeff"],
+    Cell[2206, 74, 215, 7, 25, "Notes",
+      CellTags->"Coeff"],
+    Cell[2424, 83, 186, 7, 25, "Notes",
+      CellTags->"Coeff"],
+    Cell[2613, 92, 407, 18, 25, "Notes",
+      CellTags->"Coeff"],
+    Cell[3045, 114, 63, 1, 39, "ExampleSection",
+      CellTags->"Coeff"],
+    Cell[3111, 117, 88, 1, 35, "ExampleText",
+      CellTags->"Coeff"],
+    Cell[3202, 120, 97, 3, 29, "Input",
+      CellTags->"Coeff"],
+    Cell[3302, 125, 122, 5, 35, "ExampleText",
+      CellTags->"Coeff"],
+    Cell[3427, 132, 131, 3, 29, "Input",
+      CellTags->"Coeff"],
+    Cell[3561, 137, 144, 5, 35, "ExampleText",
+      CellTags->"Coeff"],
+    Cell[3730, 146, 92, 3, 29, "Input",
+      CellTags->"Coeff"],
+    Cell[3825, 151, 133, 5, 27, "Output",
+      CellTags->"Coeff"],
+    Cell[3973, 159, 136, 5, 35, "ExampleText",
+      CellTags->"Coeff"],
+    Cell[4134, 168, 97, 3, 29, "Input",
+      CellTags->"Coeff"],
+    Cell[4234, 173, 132, 5, 27, "Output",
+      CellTags->"Coeff"],
+    Cell[4381, 181, 98, 1, 35, "ExampleText",
+      CellTags->"Coeff"],
+    Cell[4504, 186, 157, 4, 49, "Input",
+      CellTags->"Coeff"],
+    Cell[4664, 192, 132, 5, 27, "Output",
+      CellTags->"Coeff"],
+    Cell[4833, 202, 97, 3, 29, "Input",
+      CellTags->"Coeff"],
+    Cell[4933, 207, 132, 5, 41, "Output",
+      CellTags->"Coeff"]}
+  }
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{
+  {"Coeff", 5975, 239}
+  }
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 48, 1, 41, "ObjectName",
+  CellTags->"Coeff"],
+Cell[1827, 56, 376, 16, 33, "Usage",
+  CellTags->"Coeff"],
+Cell[2206, 74, 215, 7, 25, "Notes",
+  CellTags->"Coeff"],
+Cell[2424, 83, 186, 7, 25, "Notes",
+  CellTags->"Coeff"],
+Cell[2613, 92, 407, 18, 25, "Notes",
+  CellTags->"Coeff"],
+
+Cell[CellGroupData[{
+Cell[3045, 114, 63, 1, 39, "ExampleSection",
+  CellTags->"Coeff"],
+Cell[3111, 117, 88, 1, 35, "ExampleText",
+  CellTags->"Coeff"],
+Cell[3202, 120, 97, 3, 29, "Input",
+  CellTags->"Coeff"],
+Cell[3302, 125, 122, 5, 35, "ExampleText",
+  CellTags->"Coeff"],
+Cell[3427, 132, 131, 3, 29, "Input",
+  CellTags->"Coeff"],
+Cell[3561, 137, 144, 5, 35, "ExampleText",
+  CellTags->"Coeff"],
+
+Cell[CellGroupData[{
+Cell[3730, 146, 92, 3, 29, "Input",
+  CellTags->"Coeff"],
+Cell[3825, 151, 133, 5, 27, "Output",
+  CellTags->"Coeff"]
+}, Open  ]],
+Cell[3973, 159, 136, 5, 35, "ExampleText",
+  CellTags->"Coeff"],
+
+Cell[CellGroupData[{
+Cell[4134, 168, 97, 3, 29, "Input",
+  CellTags->"Coeff"],
+Cell[4234, 173, 132, 5, 27, "Output",
+  CellTags->"Coeff"]
+}, Open  ]],
+Cell[4381, 181, 98, 1, 35, "ExampleText",
+  CellTags->"Coeff"],
+
+Cell[CellGroupData[{
+Cell[4504, 186, 157, 4, 49, "Input",
+  CellTags->"Coeff"],
+Cell[4664, 192, 132, 5, 27, "Output",
+  CellTags->"Coeff"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4833, 202, 97, 3, 29, "Input",
+  CellTags->"Coeff"],
+Cell[4933, 207, 132, 5, 41, "Output",
+  CellTags->"Coeff"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

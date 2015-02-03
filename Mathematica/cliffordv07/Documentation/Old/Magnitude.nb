@@ -1,0 +1,283 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      4231,        167]*)
+(*NotebookOutlinePosition[      6294,        230]*)
+(*  CellTagsIndexPosition[      6220,        224]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Magnitude", "Program"]], "ObjectName",
+  CellTags->"Magnitude"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  Cell[BoxData[
+      StyleBox[\(Magnitude[m]\),
+        "Program"]]],
+  "calculates the magnitude of the multivector ",
+  StyleBox["m", "Program"],
+  "."
+}], "Usage",
+  CellTags->"Magnitude"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] The multivector ",
+  StyleBox["m", "Program"],
+  " must be in the canonical basis ",
+  StyleBox["e[i]", "Program"],
+  " of Clifford Algebra."
+}], "Notes",
+  CellTags->"Magnitude"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["m", "Program"],
+  " is a multivector."
+}], "Notes",
+  CellTags->"Magnitude"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["Magnitude", "Program"],
+  " returns a scalar."
+}], "Notes",
+  CellTags->"Magnitude"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] See also: ",
+  ButtonBox["Grade",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["Coeff",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["Dual",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["ToBasis",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["ToVector",
+    ButtonStyle->"RefGuideLink"],
+  "."
+}], "Notes",
+  CellTags->"Magnitude"],
+
+Cell[CellGroupData[{
+
+Cell["Further Examples", "ExampleSection",
+  CellTags->"Magnitude"],
+
+Cell["This loads the package of Clifford Algebras.", "ExampleText",
+  CellTags->"Magnitude"],
+
+Cell[BoxData[
+    \(<< "\<clifford.m\>"\)], "Input",
+  CellLabel->"In[1]:=",
+  CellTags->"Magnitude"],
+
+Cell[TextData[{
+  "The magnitude of a multivector ",
+  StyleBox["v", "Program"],
+  " is;"
+}], "ExampleText",
+  CellTags->"Magnitude"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(v = 
+        10*e[1] + 2*e[4] + 4*e[2]*e[5] + 
+          7*e[1]*e[3];\)\), "\[IndentingNewLine]", 
+    \(Magnitude[v]\)}], "Input",
+  CellLabel->"In[2]:=",
+  CellTags->"Magnitude"],
+
+Cell[BoxData[
+    \(13\)], "Output",
+  CellLabel->"Out[3]=",
+  CellTags->"Magnitude"]
+}, Open  ]],
+
+Cell["\<\
+Also it is possible to evaluate a symbolic magnitude of a multivector.\
+\>", "ExampleText",
+  CellTags->"Magnitude"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(v = x*e[1] + y*e[2] + z*e[3];\)\), "\[IndentingNewLine]", 
+    \(Magnitude[v]\)}], "Input",
+  CellLabel->"In[4]:=",
+  CellTags->"Magnitude"],
+
+Cell[BoxData[
+    \(\@\(x\^2 + y\^2 + z\^2\)\)], "Output",
+  CellLabel->"Out[5]=",
+  CellTags->"Magnitude"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 722}},
+ShowPageBreaks->False,
+WindowSize->{638, 635},
+WindowMargins->{{278, Automatic}, {8, Automatic}},
+PrintingStartingPageNumber->23,
+TaggingRules:>{"PaginationCache" -> {{2007, 5, 21, 18, 1, \
+21.453125`9.084065495134698}, {23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, \
+23, 23, 23, 23}, Automatic}},
+Magnification->1,
+StyleDefinitions -> "HelpBrowser.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{
+  "Magnitude"->{
+    Cell[1776, 53, 87, 1, 41, "ObjectName",
+      CellTags->"Magnitude"],
+    Cell[1866, 56, 235, 9, 33, "Usage",
+      CellTags->"Magnitude"],
+    Cell[2104, 67, 219, 7, 25, "Notes",
+      CellTags->"Magnitude"],
+    Cell[2326, 76, 131, 5, 25, "Notes",
+      CellTags->"Magnitude"],
+    Cell[2460, 83, 139, 5, 25, "Notes",
+      CellTags->"Magnitude"],
+    Cell[2602, 90, 407, 18, 25, "Notes",
+      CellTags->"Magnitude"],
+    Cell[3034, 112, 67, 1, 39, "ExampleSection",
+      CellTags->"Magnitude"],
+    Cell[3104, 115, 92, 1, 35, "ExampleText",
+      CellTags->"Magnitude"],
+    Cell[3199, 118, 101, 3, 29, "Input",
+      CellTags->"Magnitude"],
+    Cell[3303, 123, 133, 5, 35, "ExampleText",
+      CellTags->"Magnitude"],
+    Cell[3461, 132, 203, 6, 49, "Input",
+      CellTags->"Magnitude"],
+    Cell[3667, 140, 85, 3, 27, "Output",
+      CellTags->"Magnitude"],
+    Cell[3767, 146, 126, 3, 35, "ExampleText",
+      CellTags->"Magnitude"],
+    Cell[3918, 153, 163, 4, 49, "Input",
+      CellTags->"Magnitude"],
+    Cell[4084, 159, 107, 3, 33, "Output",
+      CellTags->"Magnitude"]}
+  }
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{
+  {"Magnitude", 5104, 189}
+  }
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 87, 1, 41, "ObjectName",
+  CellTags->"Magnitude"],
+Cell[1866, 56, 235, 9, 33, "Usage",
+  CellTags->"Magnitude"],
+Cell[2104, 67, 219, 7, 25, "Notes",
+  CellTags->"Magnitude"],
+Cell[2326, 76, 131, 5, 25, "Notes",
+  CellTags->"Magnitude"],
+Cell[2460, 83, 139, 5, 25, "Notes",
+  CellTags->"Magnitude"],
+Cell[2602, 90, 407, 18, 25, "Notes",
+  CellTags->"Magnitude"],
+
+Cell[CellGroupData[{
+Cell[3034, 112, 67, 1, 39, "ExampleSection",
+  CellTags->"Magnitude"],
+Cell[3104, 115, 92, 1, 35, "ExampleText",
+  CellTags->"Magnitude"],
+Cell[3199, 118, 101, 3, 29, "Input",
+  CellTags->"Magnitude"],
+Cell[3303, 123, 133, 5, 35, "ExampleText",
+  CellTags->"Magnitude"],
+
+Cell[CellGroupData[{
+Cell[3461, 132, 203, 6, 49, "Input",
+  CellTags->"Magnitude"],
+Cell[3667, 140, 85, 3, 27, "Output",
+  CellTags->"Magnitude"]
+}, Open  ]],
+Cell[3767, 146, 126, 3, 35, "ExampleText",
+  CellTags->"Magnitude"],
+
+Cell[CellGroupData[{
+Cell[3918, 153, 163, 4, 49, "Input",
+  CellTags->"Magnitude"],
+Cell[4084, 159, 107, 3, 33, "Output",
+  CellTags->"Magnitude"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

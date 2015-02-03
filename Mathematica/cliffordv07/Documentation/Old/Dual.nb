@@ -1,0 +1,369 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      6024,        241]*)
+(*NotebookOutlinePosition[      8157,        309]*)
+(*  CellTagsIndexPosition[      8088,        303]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Dual", "ObjectName",
+  CellTags->"Dual"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  Cell[BoxData[
+      StyleBox[\(Dual[m, d]\),
+        "Program"]]],
+  "calcula",
+  StyleBox["tes ", "Text"],
+  "the dual of the multivector ",
+  StyleBox["m", "Program"],
+  " in a n-dimensional space ",
+  StyleBox["d", "Program"],
+  "."
+}], "Usage",
+  CellTags->"Dual"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["m", "Program"],
+  " is a multivector and ",
+  StyleBox["d", "Program"],
+  " is a positive integer."
+}], "Notes",
+  CellTags->"Dual"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["Dual", "Program"],
+  " returns a scalar, vector or multivector in the canonical basis ",
+  StyleBox["e[i]", "Program"],
+  "."
+}], "Notes",
+  CellTags->"Dual"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] See also: ",
+  ButtonBox["Coeff",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["GeometricProduct",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["Grade",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["Pseudoscalar",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["ToBasis",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["ToVector",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["Turn",
+    ButtonStyle->"RefGuideLink"],
+  "."
+}], "Notes",
+  CellTags->"Dual"],
+
+Cell[CellGroupData[{
+
+Cell["Further Examples", "ExampleSection",
+  CellTags->"Dual"],
+
+Cell["This loads the package of Clifford Algebras.", "ExampleText",
+  CellTags->"Dual"],
+
+Cell[BoxData[
+    \(<< "\<clifford.m\>"\)], "Input",
+  CellLabel->"In[1]:=",
+  CellTags->"Dual"],
+
+Cell[TextData[{
+  "This evaluates the dual component of the vector ",
+  StyleBox["a", "Program"],
+  " in the 3-dimensional space, thus;"
+}], "ExampleText",
+  CellTags->"Dual"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(a = x*e[1] + y*e[2] + z*e[3];\)\), "\[IndentingNewLine]", 
+    \(Dual[a, 3]\)}], "Input",
+  CellLabel->"In[2]:=",
+  CellTags->"Dual"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{\(-z\), " ", 
+        TagBox[\(e\_1\),
+          DisplayForm], " ", 
+        TagBox[\(e\_2\),
+          DisplayForm]}], "+", 
+      RowBox[{"y", " ", 
+        TagBox[\(e\_1\),
+          DisplayForm], " ", 
+        TagBox[\(e\_3\),
+          DisplayForm]}], "-", 
+      RowBox[{"x", " ", 
+        TagBox[\(e\_2\),
+          DisplayForm], " ", 
+        TagBox[\(e\_3\),
+          DisplayForm]}]}]], "Output",
+  CellLabel->"Out[3]=",
+  CellTags->"Dual"]
+}, Open  ]],
+
+Cell[TextData[{
+  "In order to obtain the dual of the multivector ",
+  StyleBox["B", "Program"],
+  " in the 5-dimensional space is;"
+}], "ExampleText",
+  CellTags->"Dual"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(B = e[1]*e[4] + e[3]*e[5];\)\), "\[IndentingNewLine]", 
+    \(Dual[B, 5]\)}], "Input",
+  CellLabel->"In[4]:=",
+  CellTags->"Dual"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        TagBox[\(e\_1\),
+          DisplayForm], " ", 
+        TagBox[\(e\_2\),
+          DisplayForm], " ", 
+        TagBox[\(e\_4\),
+          DisplayForm]}], "-", 
+      RowBox[{
+        TagBox[\(e\_2\),
+          DisplayForm], " ", 
+        TagBox[\(e\_3\),
+          DisplayForm], " ", 
+        TagBox[\(e\_5\),
+          DisplayForm]}]}]], "Output",
+  CellLabel->"Out[5]=",
+  CellTags->"Dual"]
+}, Open  ]],
+
+Cell[TextData[{
+  "Similarly, the ",
+  StyleBox["Dual", "Program"],
+  " function is the same as if we use of the ",
+  StyleBox["GeometricProduct", "Program"],
+  " between a multivector and the ",
+  StyleBox["Turn", "Program"],
+  " of the ",
+  StyleBox["Pseudoscalar", "Program"],
+  " in the n-dimensional space."
+}], "ExampleText",
+  CellTags->"Dual"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(GeometricProduct[B, Turn[Pseudoscalar[5]]]\)], "Input",
+  CellLabel->"In[6]:=",
+  CellTags->"Dual"],
+
+Cell[BoxData[
+    RowBox[{
+      RowBox[{
+        TagBox[\(e\_1\),
+          DisplayForm], " ", 
+        TagBox[\(e\_2\),
+          DisplayForm], " ", 
+        TagBox[\(e\_4\),
+          DisplayForm]}], "-", 
+      RowBox[{
+        TagBox[\(e\_2\),
+          DisplayForm], " ", 
+        TagBox[\(e\_3\),
+          DisplayForm], " ", 
+        TagBox[\(e\_5\),
+          DisplayForm]}]}]], "Output",
+  CellLabel->"Out[6]=",
+  CellTags->"Dual"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 722}},
+ShowPageBreaks->False,
+WindowSize->{752, 602},
+WindowMargins->{{202, Automatic}, {Automatic, 31}},
+PrintingStartingPageNumber->2,
+TaggingRules:>{"PaginationCache" -> {{2007, 5, 21, 18, 1, \
+16.84375`8.979013732386306}, {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, \
+2}, Automatic}},
+ShowCellTags->True,
+Magnification->1,
+StyleDefinitions -> "HelpBrowser.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{
+  "Dual"->{
+    Cell[1776, 53, 46, 1, 55, "ObjectName",
+      CellTags->"Dual"],
+    Cell[1825, 56, 313, 13, 47, "Usage",
+      CellTags->"Dual"],
+    Cell[2141, 71, 187, 7, 39, "Notes",
+      CellTags->"Dual"],
+    Cell[2331, 80, 213, 7, 39, "Notes",
+      CellTags->"Dual"],
+    Cell[2547, 89, 546, 24, 39, "Notes",
+      CellTags->"Dual"],
+    Cell[3118, 117, 62, 1, 53, "ExampleSection",
+      CellTags->"Dual"],
+    Cell[3183, 120, 87, 1, 49, "ExampleText",
+      CellTags->"Dual"],
+    Cell[3273, 123, 96, 3, 43, "Input",
+      CellTags->"Dual"],
+    Cell[3372, 128, 175, 5, 49, "ExampleText",
+      CellTags->"Dual"],
+    Cell[3572, 137, 156, 4, 63, "Input",
+      CellTags->"Dual"],
+    Cell[3731, 143, 491, 18, 41, "Output",
+      CellTags->"Dual"],
+    Cell[4237, 164, 171, 5, 49, "ExampleText",
+      CellTags->"Dual"],
+    Cell[4433, 173, 153, 4, 63, "Input",
+      CellTags->"Dual"],
+    Cell[4589, 179, 441, 17, 41, "Output",
+      CellTags->"Dual"],
+    Cell[5045, 199, 351, 11, 52, "ExampleText",
+      CellTags->"Dual"],
+    Cell[5421, 214, 119, 3, 29, "Input",
+      CellTags->"Dual"],
+    Cell[5543, 219, 441, 17, 27, "Output",
+      CellTags->"Dual"]}
+  }
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{
+  {"Dual", 6902, 264}
+  }
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 46, 1, 55, "ObjectName",
+  CellTags->"Dual"],
+Cell[1825, 56, 313, 13, 47, "Usage",
+  CellTags->"Dual"],
+Cell[2141, 71, 187, 7, 39, "Notes",
+  CellTags->"Dual"],
+Cell[2331, 80, 213, 7, 39, "Notes",
+  CellTags->"Dual"],
+Cell[2547, 89, 546, 24, 39, "Notes",
+  CellTags->"Dual"],
+
+Cell[CellGroupData[{
+Cell[3118, 117, 62, 1, 53, "ExampleSection",
+  CellTags->"Dual"],
+Cell[3183, 120, 87, 1, 49, "ExampleText",
+  CellTags->"Dual"],
+Cell[3273, 123, 96, 3, 43, "Input",
+  CellTags->"Dual"],
+Cell[3372, 128, 175, 5, 49, "ExampleText",
+  CellTags->"Dual"],
+
+Cell[CellGroupData[{
+Cell[3572, 137, 156, 4, 63, "Input",
+  CellTags->"Dual"],
+Cell[3731, 143, 491, 18, 41, "Output",
+  CellTags->"Dual"]
+}, Open  ]],
+Cell[4237, 164, 171, 5, 49, "ExampleText",
+  CellTags->"Dual"],
+
+Cell[CellGroupData[{
+Cell[4433, 173, 153, 4, 63, "Input",
+  CellTags->"Dual"],
+Cell[4589, 179, 441, 17, 41, "Output",
+  CellTags->"Dual"]
+}, Open  ]],
+Cell[5045, 199, 351, 11, 52, "ExampleText",
+  CellTags->"Dual"],
+
+Cell[CellGroupData[{
+Cell[5421, 214, 119, 3, 29, "Input",
+  CellTags->"Dual"],
+Cell[5543, 219, 441, 17, 27, "Output",
+  CellTags->"Dual"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

@@ -1,0 +1,227 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      3579,        130]*)
+(*NotebookOutlinePosition[      5444,        185]*)
+(*  CellTagsIndexPosition[      5362,        179]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["QuaternionProduct", "ObjectName",
+  CellTags->"QuaternionProduct"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  Cell[BoxData[
+      RowBox[{"QuaternionProduct", 
+        StyleBox["[",
+          "MR"], 
+        StyleBox[\(m1, m2,  ... \),
+          "MR"], 
+        StyleBox["]",
+          "MR"]}]]],
+  " calculates the product of the quaternions ",
+  StyleBox["q1,q2,...", "Program"]
+}], "Usage",
+  CellTags->"QuaternionProduct"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["m1,m2,...", "Program"],
+  " are quaternions."
+}], "Notes",
+  CellTags->"QuaternionProduct"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["QuaternionProduct", "Program"],
+  " returns a quaternion."
+}], "Notes",
+  CellTags->"QuaternionProduct"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] See also: ",
+  ButtonBox["QuaternionConjugate",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["QuaternionInverse",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["QuaternionMagnitude",
+    ButtonStyle->"RefGuideLink"],
+  "."
+}], "Notes",
+  CellTags->"QuaternionProduct"],
+
+Cell[CellGroupData[{
+
+Cell["Further Examples", "ExampleSection",
+  CellTags->"QuaternionProduct"],
+
+Cell["This loads the package of Clifford Algebras.", "ExampleText",
+  CellTags->"QuaternionProduct"],
+
+Cell[BoxData[
+    \(<< "\<clifford.m\>"\)], "Input",
+  CellLabel->"In[1]:=",
+  CellTags->"QuaternionProduct"],
+
+Cell["This evaluates the product between two quaternions.", "ExampleText",
+  CellTags->"QuaternionProduct"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(QuaternionProduct[i + j + k, i - j - k]\)], "Input",
+  CellLabel->"In[8]:=",
+  CellTags->"QuaternionProduct"],
+
+Cell[BoxData[
+    \(1 + 2\ j - 2\ k\)], "Output",
+  CellLabel->"Out[8]=",
+  CellTags->"QuaternionProduct"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 722}},
+ShowPageBreaks->False,
+WindowSize->{752, 602},
+WindowMargins->{{226, Automatic}, {Automatic, 41}},
+PrintingStartingPageNumber->33,
+TaggingRules:>{"PaginationCache" -> {{2007, 5, 21, 18, 1, \
+23.671875`9.126807585281206}, {33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33}, \
+Automatic}},
+Magnification->1,
+StyleDefinitions -> "HelpBrowser.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{
+  "QuaternionProduct"->{
+    Cell[1776, 53, 72, 1, 41, "ObjectName",
+      CellTags->"QuaternionProduct"],
+    Cell[1851, 56, 361, 13, 33, "Usage",
+      CellTags->"QuaternionProduct"],
+    Cell[2215, 71, 146, 5, 25, "Notes",
+      CellTags->"QuaternionProduct"],
+    Cell[2364, 78, 159, 5, 25, "Notes",
+      CellTags->"QuaternionProduct"],
+    Cell[2526, 85, 325, 12, 25, "Notes",
+      CellTags->"QuaternionProduct"],
+    Cell[2876, 101, 75, 1, 39, "ExampleSection",
+      CellTags->"QuaternionProduct"],
+    Cell[2954, 104, 100, 1, 35, "ExampleText",
+      CellTags->"QuaternionProduct"],
+    Cell[3057, 107, 109, 3, 29, "Input",
+      CellTags->"QuaternionProduct"],
+    Cell[3169, 112, 107, 1, 35, "ExampleText",
+      CellTags->"QuaternionProduct"],
+    Cell[3301, 117, 129, 3, 29, "Input",
+      CellTags->"QuaternionProduct"],
+    Cell[3433, 122, 106, 3, 27, "Output",
+      CellTags->"QuaternionProduct"]}
+  }
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{
+  {"QuaternionProduct", 4445, 152}
+  }
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 72, 1, 41, "ObjectName",
+  CellTags->"QuaternionProduct"],
+Cell[1851, 56, 361, 13, 33, "Usage",
+  CellTags->"QuaternionProduct"],
+Cell[2215, 71, 146, 5, 25, "Notes",
+  CellTags->"QuaternionProduct"],
+Cell[2364, 78, 159, 5, 25, "Notes",
+  CellTags->"QuaternionProduct"],
+Cell[2526, 85, 325, 12, 25, "Notes",
+  CellTags->"QuaternionProduct"],
+
+Cell[CellGroupData[{
+Cell[2876, 101, 75, 1, 39, "ExampleSection",
+  CellTags->"QuaternionProduct"],
+Cell[2954, 104, 100, 1, 35, "ExampleText",
+  CellTags->"QuaternionProduct"],
+Cell[3057, 107, 109, 3, 29, "Input",
+  CellTags->"QuaternionProduct"],
+Cell[3169, 112, 107, 1, 35, "ExampleText",
+  CellTags->"QuaternionProduct"],
+
+Cell[CellGroupData[{
+Cell[3301, 117, 129, 3, 29, "Input",
+  CellTags->"QuaternionProduct"],
+Cell[3433, 122, 106, 3, 27, "Output",
+  CellTags->"QuaternionProduct"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

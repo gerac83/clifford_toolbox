@@ -1,0 +1,309 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      5185,        192]*)
+(*NotebookOutlinePosition[      7324,        256]*)
+(*  CellTagsIndexPosition[      7247,        250]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["GeometricCos", "Program"]], "ObjectName",
+  CellTags->"GeometricCos"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  Cell[BoxData[
+      StyleBox[\(GeometricCos[m]\),
+        "Program"]]],
+  "calcula",
+  StyleBox["tes ", "Text"],
+  "the power series of the function ",
+  StyleBox["Cos", "Program"],
+  " of the multivector ",
+  StyleBox["m", "Program"],
+  ".\n\[FilledSmallSquare] ",
+  Cell[BoxData[
+      StyleBox[\(GeometricCos[m, n]\),
+        "Program"]]],
+  "calcula",
+  StyleBox["tes the ", "Text"],
+  "series of the function ",
+  StyleBox["Cos", "Program"],
+  " of the multivector ",
+  StyleBox["m", "Program"],
+  " to a power ",
+  StyleBox["n", "Program"],
+  "."
+}], "Usage",
+  CellTags->"GeometricCos"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox[" ",
+    FontWeight->"Bold"],
+  StyleBox["m", "Program"],
+  " is a multivector and ",
+  StyleBox["n", "Program"],
+  " a positive integer."
+}], "Notes",
+  CellTags->"GeometricCos"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["n", "Program"],
+  " can be omitted and the default value is 10."
+}], "Notes",
+  CellTags->"GeometricCos"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["GeometricCos", "Program"],
+  " returns a multivector in the canonical basis ",
+  StyleBox["e[i]", "Program"],
+  "."
+}], "Notes",
+  CellTags->"GeometricCos"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] See also: ",
+  ButtonBox["GeometricExp",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["GeometricPower",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["GeometricProduct",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["GeometricProductSeries",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["GeometricSin",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["GeometricTan",
+    ButtonStyle->"RefGuideLink"],
+  "."
+}], "Notes",
+  CellTags->"GeometricCos"],
+
+Cell[CellGroupData[{
+
+Cell["Further Examples", "ExampleSection",
+  CellTags->"GeometricCos"],
+
+Cell["This loads the package of Clifford Algebras.", "ExampleText",
+  CellTags->"GeometricCos"],
+
+Cell[BoxData[
+    \(<< "\<clifford.m\>"\)], "Input",
+  CellLabel->"In[1]:=",
+  CellTags->"GeometricCos"],
+
+Cell[TextData[{
+  "This evaluates the power series of ",
+  StyleBox["Cos", "Program"],
+  " of a vector ",
+  StyleBox["a", "Program"],
+  StyleBox[".", "Text"]
+}], "ExampleText",
+  CellTags->"GeometricCos"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(a = x*e[1] + y*e[2] + z*e[3];\)\), "\[IndentingNewLine]", 
+    \(GeometricCos[a] // Simplify\)}], "Input",
+  CellLabel->"In[2]:=",
+  CellTags->"GeometricCos"],
+
+Cell[BoxData[
+    \(1 + 1\/2\ \((\(-x\^2\) - y\^2 - z\^2)\) + 
+      1\/24\ \((x\^2 + y\^2 + z\^2)\)\^2 - 
+      1\/720\ \((x\^2 + y\^2 + z\^2)\)\^3 + \((x\^2 + y\^2 + \
+z\^2)\)\^4\/40320 - \((x\^2 + y\^2 + z\^2)\)\^5\/3628800\)], "Output",
+  CellLabel->"Out[3]=",
+  CellTags->"GeometricCos"]
+}, Open  ]],
+
+Cell["Here is the same vector but until the fourth power.", "ExampleText",
+  CellTags->"GeometricCos"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(GeometricCos[a, 4] // Simplify\)], "Input",
+  CellLabel->"In[4]:=",
+  CellTags->"GeometricCos"],
+
+Cell[BoxData[
+    \(1\/24\ \((24 + x\^4 + y\^4 - 12\ z\^2 + z\^4 + 
+          2\ y\^2\ \((\(-6\) + z\^2)\) + 
+          2\ x\^2\ \((\(-6\) + y\^2 + z\^2)\))\)\)], "Output",
+  CellLabel->"Out[4]=",
+  CellTags->"GeometricCos"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 722}},
+ShowPageBreaks->False,
+WindowSize->{752, 602},
+WindowMargins->{{190, Automatic}, {Automatic, 33}},
+PrintingStartingPageNumber->10,
+TaggingRules:>{"PaginationCache" -> {{2007, 5, 21, 18, 1, \
+17.859375`9.004441199203342}, {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, \
+10, 10, 10, 10}, Automatic}},
+ShowCellTags->True,
+Magnification->1,
+StyleDefinitions -> "HelpBrowser.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{
+  "GeometricCos"->{
+    Cell[1776, 53, 93, 1, 55, "ObjectName",
+      CellTags->"GeometricCos"],
+    Cell[1872, 56, 638, 25, 70, "Usage",
+      CellTags->"GeometricCos"],
+    Cell[2513, 83, 233, 9, 39, "Notes",
+      CellTags->"GeometricCos"],
+    Cell[2749, 94, 160, 5, 39, "Notes",
+      CellTags->"GeometricCos"],
+    Cell[2912, 101, 211, 7, 39, "Notes",
+      CellTags->"GeometricCos"],
+    Cell[3126, 110, 527, 21, 56, "Notes",
+      CellTags->"GeometricCos"],
+    Cell[3678, 135, 70, 1, 53, "ExampleSection",
+      CellTags->"GeometricCos"],
+    Cell[3751, 138, 95, 1, 49, "ExampleText",
+      CellTags->"GeometricCos"],
+    Cell[3849, 141, 104, 3, 43, "Input",
+      CellTags->"GeometricCos"],
+    Cell[3956, 146, 204, 7, 49, "ExampleText",
+      CellTags->"GeometricCos"],
+    Cell[4185, 157, 181, 4, 63, "Input",
+      CellTags->"GeometricCos"],
+    Cell[4369, 163, 292, 6, 58, "Output",
+      CellTags->"GeometricCos"],
+    Cell[4676, 172, 102, 1, 49, "ExampleText",
+      CellTags->"GeometricCos"],
+    Cell[4803, 177, 115, 3, 29, "Input",
+      CellTags->"GeometricCos"],
+    Cell[4921, 182, 224, 5, 40, "Output",
+      CellTags->"GeometricCos"]}
+  }
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{
+  {"GeometricCos", 6082, 215}
+  }
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 93, 1, 55, "ObjectName",
+  CellTags->"GeometricCos"],
+Cell[1872, 56, 638, 25, 70, "Usage",
+  CellTags->"GeometricCos"],
+Cell[2513, 83, 233, 9, 39, "Notes",
+  CellTags->"GeometricCos"],
+Cell[2749, 94, 160, 5, 39, "Notes",
+  CellTags->"GeometricCos"],
+Cell[2912, 101, 211, 7, 39, "Notes",
+  CellTags->"GeometricCos"],
+Cell[3126, 110, 527, 21, 56, "Notes",
+  CellTags->"GeometricCos"],
+
+Cell[CellGroupData[{
+Cell[3678, 135, 70, 1, 53, "ExampleSection",
+  CellTags->"GeometricCos"],
+Cell[3751, 138, 95, 1, 49, "ExampleText",
+  CellTags->"GeometricCos"],
+Cell[3849, 141, 104, 3, 43, "Input",
+  CellTags->"GeometricCos"],
+Cell[3956, 146, 204, 7, 49, "ExampleText",
+  CellTags->"GeometricCos"],
+
+Cell[CellGroupData[{
+Cell[4185, 157, 181, 4, 63, "Input",
+  CellTags->"GeometricCos"],
+Cell[4369, 163, 292, 6, 58, "Output",
+  CellTags->"GeometricCos"]
+}, Open  ]],
+Cell[4676, 172, 102, 1, 49, "ExampleText",
+  CellTags->"GeometricCos"],
+
+Cell[CellGroupData[{
+Cell[4803, 177, 115, 3, 29, "Input",
+  CellTags->"GeometricCos"],
+Cell[4921, 182, 224, 5, 40, "Output",
+  CellTags->"GeometricCos"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

@@ -1,0 +1,285 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      4516,        172]*)
+(*NotebookOutlinePosition[      6573,        234]*)
+(*  CellTagsIndexPosition[      6496,        228]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Pseudoscalar", "Program"]], "ObjectName",
+  CellTags->"Pseudoscalar"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["Pseudoscalar[n]", "Program"],
+  " gives the pseudoscalar (volume element) of a n-dimensional space."
+}], "Usage",
+  CellTags->"Pseudoscalar"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["n", "Program"],
+  " is a positive intger."
+}], "Notes",
+  CellTags->"Pseudoscalar"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["Pseudoscalar", "Program"],
+  " returns a multivector in the canonical basis ",
+  StyleBox["e[i]", "Program"],
+  "."
+}], "Notes",
+  CellTags->"Pseudoscalar"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] See also: ",
+  ButtonBox["GeometricProduct",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["Grade",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["InnerProduct",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["MultivectorInverse",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["OuterProduct",
+    ButtonStyle->"RefGuideLink"],
+  "."
+}], "Notes",
+  CellTags->"Pseudoscalar"],
+
+Cell[CellGroupData[{
+
+Cell["Further Examples", "ExampleSection",
+  CellTags->"Pseudoscalar"],
+
+Cell["This loads the package of Clifford Algebras.", "ExampleText",
+  CellTags->"Pseudoscalar"],
+
+Cell[BoxData[
+    \(<< "\<clifford.m\>"\)], "Input",
+  CellLabel->"In[1]:=",
+  CellTags->"Pseudoscalar"],
+
+Cell["The pseudoscalar of the 3-dimensional space is:", "ExampleText",
+  CellTags->"Pseudoscalar"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Pseudoscalar[3]\)], "Input",
+  CellLabel->"In[2]:=",
+  CellTags->"Pseudoscalar"],
+
+Cell[BoxData[
+    RowBox[{
+      TagBox[\(e\_1\),
+        DisplayForm], " ", 
+      TagBox[\(e\_2\),
+        DisplayForm], " ", 
+      TagBox[\(e\_3\),
+        DisplayForm]}]], "Output",
+  CellLabel->"Out[2]=",
+  CellTags->"Pseudoscalar"]
+}, Open  ]],
+
+Cell["The pseudoscalar of the 10-dimensional space is:", "ExampleText",
+  CellTags->"Pseudoscalar"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Pseudoscalar[10]\)], "Input",
+  CellLabel->"In[3]:=",
+  CellTags->"Pseudoscalar"],
+
+Cell[BoxData[
+    RowBox[{
+      TagBox[\(e\_1\),
+        DisplayForm], " ", 
+      TagBox[\(e\_2\),
+        DisplayForm], " ", 
+      TagBox[\(e\_3\),
+        DisplayForm], " ", 
+      TagBox[\(e\_4\),
+        DisplayForm], " ", 
+      TagBox[\(e\_5\),
+        DisplayForm], " ", 
+      TagBox[\(e\_6\),
+        DisplayForm], " ", 
+      TagBox[\(e\_7\),
+        DisplayForm], " ", 
+      TagBox[\(e\_8\),
+        DisplayForm], " ", 
+      TagBox[\(e\_9\),
+        DisplayForm], " ", 
+      TagBox[\(e\_10\),
+        DisplayForm]}]], "Output",
+  CellLabel->"Out[3]=",
+  CellTags->"Pseudoscalar"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 722}},
+ShowPageBreaks->False,
+WindowSize->{638, 635},
+WindowMargins->{{313, Automatic}, {12, Automatic}},
+PrintingStartingPageNumber->29,
+TaggingRules:>{"PaginationCache" -> {{2007, 5, 21, 18, 1, \
+22.59375`9.106563248128923}, {29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, \
+29, 29}, Automatic}},
+ShowCellTags->True,
+Magnification->1,
+StyleDefinitions -> "HelpBrowser.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{
+  "Pseudoscalar"->{
+    Cell[1776, 53, 93, 1, 55, "ObjectName",
+      CellTags->"Pseudoscalar"],
+    Cell[1872, 56, 196, 5, 47, "Usage",
+      CellTags->"Pseudoscalar"],
+    Cell[2071, 63, 138, 5, 39, "Notes",
+      CellTags->"Pseudoscalar"],
+    Cell[2212, 70, 211, 7, 39, "Notes",
+      CellTags->"Pseudoscalar"],
+    Cell[2426, 79, 444, 18, 39, "Notes",
+      CellTags->"Pseudoscalar"],
+    Cell[2895, 101, 70, 1, 53, "ExampleSection",
+      CellTags->"Pseudoscalar"],
+    Cell[2968, 104, 95, 1, 49, "ExampleText",
+      CellTags->"Pseudoscalar"],
+    Cell[3066, 107, 104, 3, 43, "Input",
+      CellTags->"Pseudoscalar"],
+    Cell[3173, 112, 98, 1, 49, "ExampleText",
+      CellTags->"Pseudoscalar"],
+    Cell[3296, 117, 100, 3, 43, "Input",
+      CellTags->"Pseudoscalar"],
+    Cell[3399, 122, 238, 9, 41, "Output",
+      CellTags->"Pseudoscalar"],
+    Cell[3652, 134, 99, 1, 49, "ExampleText",
+      CellTags->"Pseudoscalar"],
+    Cell[3776, 139, 101, 3, 43, "Input",
+      CellTags->"Pseudoscalar"],
+    Cell[3880, 144, 596, 23, 41, "Output",
+      CellTags->"Pseudoscalar"]}
+  }
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{
+  {"Pseudoscalar", 5408, 195}
+  }
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 93, 1, 55, "ObjectName",
+  CellTags->"Pseudoscalar"],
+Cell[1872, 56, 196, 5, 47, "Usage",
+  CellTags->"Pseudoscalar"],
+Cell[2071, 63, 138, 5, 39, "Notes",
+  CellTags->"Pseudoscalar"],
+Cell[2212, 70, 211, 7, 39, "Notes",
+  CellTags->"Pseudoscalar"],
+Cell[2426, 79, 444, 18, 39, "Notes",
+  CellTags->"Pseudoscalar"],
+
+Cell[CellGroupData[{
+Cell[2895, 101, 70, 1, 53, "ExampleSection",
+  CellTags->"Pseudoscalar"],
+Cell[2968, 104, 95, 1, 49, "ExampleText",
+  CellTags->"Pseudoscalar"],
+Cell[3066, 107, 104, 3, 43, "Input",
+  CellTags->"Pseudoscalar"],
+Cell[3173, 112, 98, 1, 49, "ExampleText",
+  CellTags->"Pseudoscalar"],
+
+Cell[CellGroupData[{
+Cell[3296, 117, 100, 3, 43, "Input",
+  CellTags->"Pseudoscalar"],
+Cell[3399, 122, 238, 9, 41, "Output",
+  CellTags->"Pseudoscalar"]
+}, Open  ]],
+Cell[3652, 134, 99, 1, 49, "ExampleText",
+  CellTags->"Pseudoscalar"],
+
+Cell[CellGroupData[{
+Cell[3776, 139, 101, 3, 43, "Input",
+  CellTags->"Pseudoscalar"],
+Cell[3880, 144, 596, 23, 41, "Output",
+  CellTags->"Pseudoscalar"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

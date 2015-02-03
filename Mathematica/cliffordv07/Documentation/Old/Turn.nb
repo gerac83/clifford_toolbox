@@ -1,0 +1,275 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      4373,        174]*)
+(*NotebookOutlinePosition[      6135,        231]*)
+(*  CellTagsIndexPosition[      6066,        225]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Turn", "Program"]], "ObjectName",
+  CellTags->"Turn"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  Cell[BoxData[
+      StyleBox[\(Turn[m]\),
+        "Program"]]],
+  " gives the reverse of the multivector ",
+  StyleBox["m", "Program"],
+  "."
+}], "Usage",
+  CellTags->"Turn"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] The multivector ",
+  StyleBox["m", "Program"],
+  " must be in the canonical basis ",
+  StyleBox["e[i]", "Program"],
+  " of Clifford Algebra."
+}], "Notes",
+  CellTags->"Turn"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["m", "Program"],
+  " is a multivector."
+}], "Notes",
+  CellTags->"Turn"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] ",
+  StyleBox["Turn", "Program"],
+  " returns a multivector in the canonical basis ",
+  StyleBox["e[i]", "Program"],
+  "."
+}], "Notes",
+  CellTags->"Turn"],
+
+Cell[TextData[{
+  "\[FilledSmallSquare] See also: ",
+  ButtonBox["Coeff",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["Dual",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["GeometricProduct",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["Grade",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["Pseudoscalar",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["ToBasis",
+    ButtonStyle->"RefGuideLink"],
+  ", ",
+  ButtonBox["ToVector",
+    ButtonStyle->"RefGuideLink"],
+  "."
+}], "Notes",
+  CellTags->"Turn"],
+
+Cell[CellGroupData[{
+
+Cell["Further Examples", "ExampleSection",
+  CellTags->"Turn"],
+
+Cell["This loads the package of Clifford Algebras.", "ExampleText",
+  CellTags->"Turn"],
+
+Cell[BoxData[
+    \(<< "\<clifford.m\>"\)], "Input",
+  CellLabel->"In[1]:=",
+  CellTags->"Turn"],
+
+Cell[TextData[{
+  "The turn of a multivector ",
+  StyleBox["v", "Program"],
+  " is;"
+}], "ExampleText",
+  CellTags->"Turn"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(v = 
+        e[1] + e[2] + e[3] + e[1]*e[2] + 
+          e[1]*e[2]*e[7];\)\), "\[IndentingNewLine]", 
+    \(Turn[v]\)}], "Input",
+  CellLabel->"In[8]:=",
+  CellTags->"Turn"],
+
+Cell[BoxData[
+    RowBox[{
+      TagBox[\(e\_1\),
+        DisplayForm], "+", 
+      TagBox[\(e\_2\),
+        DisplayForm], "-", 
+      RowBox[{
+        TagBox[\(e\_1\),
+          DisplayForm], " ", 
+        TagBox[\(e\_2\),
+          DisplayForm]}], "+", 
+      TagBox[\(e\_3\),
+        DisplayForm], "-", 
+      RowBox[{
+        TagBox[\(e\_1\),
+          DisplayForm], " ", 
+        TagBox[\(e\_2\),
+          DisplayForm], " ", 
+        TagBox[\(e\_7\),
+          DisplayForm]}]}]], "Output",
+  CellLabel->"Out[9]=",
+  CellTags->"Turn"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 722}},
+ShowPageBreaks->False,
+WindowSize->{638, 635},
+WindowMargins->{{278, Automatic}, {8, Automatic}},
+PrintingStartingPageNumber->47,
+TaggingRules:>{"PaginationCache" -> {{2007, 5, 21, 18, 1, \
+25.671875`9.162032510422886}, {47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, \
+47}, Automatic}},
+Magnification->1,
+StyleDefinitions -> "HelpBrowser.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{
+  "Turn"->{
+    Cell[1776, 53, 77, 1, 41, "ObjectName",
+      CellTags->"Turn"],
+    Cell[1856, 56, 219, 9, 33, "Usage",
+      CellTags->"Turn"],
+    Cell[2078, 67, 214, 7, 25, "Notes",
+      CellTags->"Turn"],
+    Cell[2295, 76, 126, 5, 25, "Notes",
+      CellTags->"Turn"],
+    Cell[2424, 83, 195, 7, 25, "Notes",
+      CellTags->"Turn"],
+    Cell[2622, 92, 546, 24, 25, "Notes",
+      CellTags->"Turn"],
+    Cell[3193, 120, 62, 1, 39, "ExampleSection",
+      CellTags->"Turn"],
+    Cell[3258, 123, 87, 1, 35, "ExampleText",
+      CellTags->"Turn"],
+    Cell[3348, 126, 96, 3, 29, "Input",
+      CellTags->"Turn"],
+    Cell[3447, 131, 123, 5, 35, "ExampleText",
+      CellTags->"Turn"],
+    Cell[3595, 140, 196, 6, 49, "Input",
+      CellTags->"Turn"],
+    Cell[3794, 148, 539, 21, 27, "Output",
+      CellTags->"Turn"]}
+  }
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{
+  {"Turn", 5229, 196}
+  }
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 77, 1, 41, "ObjectName",
+  CellTags->"Turn"],
+Cell[1856, 56, 219, 9, 33, "Usage",
+  CellTags->"Turn"],
+Cell[2078, 67, 214, 7, 25, "Notes",
+  CellTags->"Turn"],
+Cell[2295, 76, 126, 5, 25, "Notes",
+  CellTags->"Turn"],
+Cell[2424, 83, 195, 7, 25, "Notes",
+  CellTags->"Turn"],
+Cell[2622, 92, 546, 24, 25, "Notes",
+  CellTags->"Turn"],
+
+Cell[CellGroupData[{
+Cell[3193, 120, 62, 1, 39, "ExampleSection",
+  CellTags->"Turn"],
+Cell[3258, 123, 87, 1, 35, "ExampleText",
+  CellTags->"Turn"],
+Cell[3348, 126, 96, 3, 29, "Input",
+  CellTags->"Turn"],
+Cell[3447, 131, 123, 5, 35, "ExampleText",
+  CellTags->"Turn"],
+
+Cell[CellGroupData[{
+Cell[3595, 140, 196, 6, 49, "Input",
+  CellTags->"Turn"],
+Cell[3794, 148, 539, 21, 27, "Output",
+  CellTags->"Turn"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
