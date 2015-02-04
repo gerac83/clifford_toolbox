@@ -1,0 +1,626 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     25325,        617]
+NotebookOptionsPosition[     24001,        570]
+NotebookOutlinePosition[     24419,        587]
+CellTagsIndexPosition[     24376,        584]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Clifford Algebra Palette (Source file)", "Title",
+ CellChangeTimes->{{3.5090283547067747`*^9, 3.509028373072336*^9}}],
+
+Cell["\<\
+Authors : 
+ \tAragon - Camarasa, G.
+  \tAragon - Gonzalez, G.
+   \tAragon J.L.
+   \tRodriguez - Andrade, M.A.\
+\>", "Text",
+ CellChangeTimes->{{3.5090291799785414`*^9, 3.5090291844797964`*^9}},
+ FontSize->16,
+ FontWeight->"Bold"],
+
+Cell["Version 0.7, February 2015", "Text",
+ CellChangeTimes->{{3.509028441305402*^9, 3.509028455729059*^9}, {
+  3.632049057459877*^9, 3.632049060384384*^9}},
+ FontSize->14,
+ FontWeight->"Bold"],
+
+Cell[CellGroupData[{
+
+Cell["BSD License", "Section",
+ CellChangeTimes->{{3.509028344606469*^9, 3.5090283530859146`*^9}, {
+  3.5090288374371243`*^9, 3.5090288399272313`*^9}}],
+
+Cell["\<\
+Copyright (c) 2015, Aragon-Camarasa, G., Aragon-Gonzalez, G.; Aragon J. L. & \
+Rodriguez-Andrade, M. A.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without \
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this \
+list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice, \
+this list of conditions and the following disclaimer in the documentation \
+and/or other materials provided with the distribution.
+
+* Neither the name of clifford_toolbox nor the names of its contributors may \
+be used to endorse or promote products derived from this software without \
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \
+\[OpenCurlyDoubleQuote]AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES, \
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND \
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE \
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, \
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT \
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, \
+OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF \
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING \
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, \
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\
+\>", "Text",
+ CellGroupingRules->"NormalGrouping",
+ CellChangeTimes->{{3.5090285070902824`*^9, 3.5090286353799443`*^9}, {
+  3.50902874699942*^9, 3.509028747436221*^9}, {3.632049071732759*^9, 
+  3.632049114846643*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Definitions", "Section",
+ CellChangeTimes->{{3.5090283175426865`*^9, 3.509028326648177*^9}, {
+  3.5090287896684732`*^9, 3.5090287962330894`*^9}}],
+
+Cell["Wiki Button", "Text",
+ CellChangeTimes->{{3.5090212017782955`*^9, 3.5090212102803106`*^9}, {
+  3.5090282946209984`*^9, 3.5090283008225813`*^9}},
+ FontSize->24],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"helpBLarge", "=", 
+   RowBox[{"Button", "[", 
+    RowBox[{
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<Clifford Algebra Webpage\>\"", ",", "\"\<Hyperlink\>\""}], 
+      "]"}], ",", 
+     RowBox[{"NotebookLocate", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "URL", "[", "\"\<http://gerac83.github.io/clifford_toolbox/\>\"", 
+         "]"}], ",", "None"}], "}"}], "]"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "None"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"360", ",", "25"}], "}"}]}]}], "]"}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.5090240361286554`*^9, 3.509024042446495*^9}, {
+   3.50902413304519*^9, 3.5090242012820272`*^9}, {3.509024239046291*^9, 
+   3.5090242427130866`*^9}, {3.509024326426508*^9, 3.509024354969675*^9}, {
+   3.50902439602954*^9, 3.5090244276423483`*^9}, 3.509024572232905*^9, {
+   3.5090257168716817`*^9, 3.509025723981864*^9}, {3.5090280224890995`*^9, 
+   3.509028115449463*^9}, {3.509028180257367*^9, 3.5090281806143875`*^9}, {
+   3.509028304268446*^9, 3.509028304678452*^9}, {3.6320491300669107`*^9, 
+   3.632049134655615*^9}, {3.632049254972259*^9, 3.632049260207377*^9}, {
+   3.632049399568049*^9, 3.632049419784198*^9}, {3.63204945232622*^9, 
+   3.6320494548519278`*^9}}],
+
+Cell["Basic Operations", "Text",
+ CellChangeTimes->{{3.5090212017782955`*^9, 3.5090212102803106`*^9}},
+ FontSize->24],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"basicOp1", "=", 
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"Partition", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"PasteButton", "[", 
+          RowBox[{
+           RowBox[{"RawBoxes", "[", "#", "]"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"170", ",", "25"}], "}"}]}], ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<FramedPalette\>\""}]}], 
+          "]"}], "&"}], "/@", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<e[\[SelectionPlaceholder]]\>\"", ",", "\[IndentingNewLine]", 
+          "\"\<Pseudoscalar[\[SelectionPlaceholder]]\>\"", ",", 
+          "\[IndentingNewLine]", 
+          "\"\<$SetSignature={\[SelectionPlaceholder],\[Placeholder],\
+\[Placeholder]}\>\"", ",", "\[IndentingNewLine]", 
+          "\"\<$SetEpsilon=\[SelectionPlaceholder]\>\"", ",", 
+          "\[IndentingNewLine]", "\"\<ToBasis[\[SelectionPlaceholder]]\>\"", 
+          ",", "\[IndentingNewLine]", 
+          "\"\<ToVector[\[SelectionPlaceholder],\[Placeholder]]\>\""}], 
+         "\[IndentingNewLine]", "}"}]}], ",", "2"}], "]"}], ",", 
+     RowBox[{"Spacings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0.1", ",", "0.1"}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"basicOp2", "=", 
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"Partition", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"PasteButton", "[", 
+          RowBox[{
+           RowBox[{"RawBoxes", "[", "#", "]"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"170", ",", "25"}], "}"}]}], ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<FramedPalette\>\""}]}], 
+          "]"}], "&"}], "/@", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Grade[\[SelectionPlaceholder],\[Placeholder]]\>\"", ",", 
+          "\[IndentingNewLine]", 
+          "\"\<Coeff[\[SelectionPlaceholder],\[Placeholder]]\>\"", ",", 
+          "\[IndentingNewLine]", 
+          "\"\<GeometricProduct[\[SelectionPlaceholder],\[Placeholder],\
+\[Placeholder]]\>\"", ",", "\[IndentingNewLine]", 
+          "\"\<InnerProduct[\[SelectionPlaceholder],\[Placeholder],\
+\[Placeholder]]\>\"", ",", "\[IndentingNewLine]", 
+          "\"\<InnerProduct[\[SelectionPlaceholder],\[Placeholder],\
+\[Placeholder]]\>\"", ",", "\[IndentingNewLine]", 
+          "\"\<OuterProduct[\[SelectionPlaceholder],\[Placeholder],\
+\[Placeholder]]\>\"", ",", "\[IndentingNewLine]", 
+          "\"\<MultivectorInverse[\[SelectionPlaceholder]]\>\"", ",", 
+          "\[IndentingNewLine]", 
+          "\"\<RegressiveProduct[\[SelectionPlaceholder],\[Placeholder]]\>\"",
+           ",", "\[IndentingNewLine]", 
+          "\"\<Turn[\[SelectionPlaceholder]]\>\"", ",", 
+          "\[IndentingNewLine]", "\"\<Magnitude[\[SelectionPlaceholder]]\>\"",
+           ",", "\[IndentingNewLine]", 
+          "\"\<Dual[\[SelectionPlaceholder],\[Placeholder]]\>\"", ",", 
+          "\[IndentingNewLine]", 
+          "\"\<Dualize[\[SelectionPlaceholder],\[Placeholder]]\>\""}], 
+         "\[IndentingNewLine]", "}"}]}], ",", "2"}], "]"}], ",", 
+     RowBox[{"Spacings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0.1", ",", "0.1"}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"basicOp3", "=", 
+   RowBox[{"PasteButton", "[", 
+    RowBox[{
+     RowBox[{
+     "RawBoxes", "[", "\"\<GADraw[\[SelectionPlaceholder]]\>\"", "]"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"340", ",", "25"}], "}"}]}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<FramedPalette\>\""}]}], "]"}]}], 
+  ";"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.5090211462733984`*^9, 3.5090211793922567`*^9}, {
+   3.509021432333808*^9, 3.5090215184507055`*^9}, {3.5090215485587587`*^9, 
+   3.5090216076204624`*^9}, {3.509021848672086*^9, 3.5090218773449364`*^9}, {
+   3.5090219102141943`*^9, 3.509021956249875*^9}, {3.5090220073272843`*^9, 
+   3.5090220990554457`*^9}, {3.5090222246572685`*^9, 
+   3.5090222285372734`*^9}, {3.509022288614891*^9, 3.5090223407310886`*^9}, {
+   3.5090223747722178`*^9, 3.5090224066022625`*^9}, {3.509022452172326*^9, 
+   3.5090225827053337`*^9}, {3.509022921028147*^9, 3.509022976903093*^9}, {
+   3.509023037735486*^9, 3.5090231793718977`*^9}, {3.509023219744157*^9, 
+   3.509023257164027*^9}, {3.509023364967755*^9, 3.509023435969165*^9}, {
+   3.5090234879539003`*^9, 3.5090235439032125`*^9}, 3.50902437462254*^9, {
+   3.509024470056774*^9, 3.509024472986942*^9}, {3.5090279444947615`*^9, 
+   3.509027955578396*^9}, {3.509028220032152*^9, 3.509028226171136*^9}, {
+   3.6320491443272257`*^9, 3.632049152379724*^9}, {3.632049222839354*^9, 
+   3.632049238315546*^9}, {3.6320493701860857`*^9, 3.6320493705175753`*^9}, {
+   3.6320494574276457`*^9, 3.6320494615564003`*^9}}],
+
+Cell["Geometric Transformations", "Text",
+ CellChangeTimes->{{3.5090212017782955`*^9, 3.5090212102803106`*^9}, {
+  3.5090213765470715`*^9, 3.5090213903530955`*^9}},
+ FontSize->24],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"geomOp", "=", 
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"Partition", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"PasteButton", "[", 
+          RowBox[{
+           RowBox[{"RawBoxes", "[", "#", "]"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"170", ",", "25"}], "}"}]}], ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<FramedPalette\>\""}]}], 
+          "]"}], "&"}], "/@", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<GARotation[\[SelectionPlaceholder],\[Placeholder],\[Placeholder]\
+,\[Placeholder]]\>\"", ",", "\[IndentingNewLine]", 
+          "\"\<GAReflection=[\[SelectionPlaceholder],\[Placeholder],\
+\[Placeholder]]\>\"", ",", "\[IndentingNewLine]", 
+          "\"\<GAProjection=[\[SelectionPlaceholder],\[Placeholder]]\>\"", 
+          ",", "\[IndentingNewLine]", 
+          "\"\<GARejection[\[SelectionPlaceholder],\[Placeholder]]\>\"", ",", 
+          "\[IndentingNewLine]", 
+          "\"\<HomogeneousQ[\[SelectionPlaceholder],\[Placeholder]]\>\"", ",",
+           "\[IndentingNewLine]", 
+          "\"\<PointToBasis[\[SelectionPlaceholder]]\>\"", ",", 
+          "\[IndentingNewLine]", 
+          "\"\<PointFromBasis[\[SelectionPlaceholder],\[Placeholder]]\>\"", 
+          ",", "\[IndentingNewLine]", 
+          "\"\<ToVectorBase[\[SelectionPlaceholder],\[Placeholder]]\>\""}], 
+         "\[IndentingNewLine]", "}"}]}], ",", "2"}], "]"}], ",", 
+     RowBox[{"Spacings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0.1", ",", "0.1"}], "}"}]}]}], "]"}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.5090214113819323`*^9, {3.509023608025073*^9, 3.5090238154764853`*^9}, {
+   3.509024018961162*^9, 3.5090240235541143`*^9}, 3.509024474653037*^9, {
+   3.632049248086742*^9, 3.632049248402977*^9}, 3.6320494635999117`*^9}],
+
+Cell["Quaternions", "Text",
+ CellChangeTimes->{{3.5090212017782955`*^9, 3.5090212102803106`*^9}, 
+   3.509021379947877*^9},
+ FontSize->24],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"quatOp1", "=", 
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"Partition", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"PasteButton", "[", 
+          RowBox[{
+           RowBox[{"RawBoxes", "[", "#", "]"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"170", "/", "3"}], ",", "25"}], "}"}]}], ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<FramedPalette\>\""}]}], 
+          "]"}], "&"}], "/@", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<i\>\"", ",", "\[IndentingNewLine]", "\"\<j\>\"", ",", 
+          "\[IndentingNewLine]", "\"\<k\>\""}], "\[IndentingNewLine]", 
+         "}"}]}], ",", "3"}], "]"}], ",", 
+     RowBox[{"Spacings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", ".1"}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"quatOp2", "=", 
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"Partition", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"PasteButton", "[", 
+          RowBox[{
+           RowBox[{"RawBoxes", "[", "#", "]"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"170", ",", "25"}], "}"}]}], ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<FramedPalette\>\""}]}], 
+          "]"}], "&"}], "/@", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<QuaternionProduct[\[SelectionPlaceholder],\[Placeholder]]\>\"", 
+          ",", "\[IndentingNewLine]", 
+          "\"\<QuaternionInverse[\[SelectionPlaceholder]]\>\"", ",", 
+          "\[IndentingNewLine]", 
+          "\"\<QuaternionMagnitude[\[SelectionPlaceholder]]\>\"", ",", 
+          "\[IndentingNewLine]", 
+          "\"\<QuaternionConjugate[\[SelectionPlaceholder]]\>\""}], 
+         "\[IndentingNewLine]", "}"}]}], ",", "2"}], "]"}], ",", 
+     RowBox[{"Spacings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", ".1"}], "}"}]}]}], "]"}]}], ";"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.5090214188387456`*^9, {3.5090249945463247`*^9, 3.509025044743471*^9}, {
+   3.509025110699088*^9, 3.5090252233172526`*^9}, {3.509025261592131*^9, 
+   3.5090252618221445`*^9}, {3.5090252949932137`*^9, 3.509025315745573*^9}, 
+   3.509025371780881*^9, {3.6320492684480658`*^9, 3.632049273314521*^9}, {
+   3.632049468190134*^9, 3.632049470440692*^9}, {3.632049509071879*^9, 
+   3.632049517814117*^9}}],
+
+Cell["Special", "Text",
+ CellChangeTimes->{{3.5090212017782955`*^9, 3.5090212102803106`*^9}, 
+   3.509021385017886*^9},
+ FontSize->24],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"specialOp", "=", 
+   RowBox[{"Column", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"PasteButton", "[", 
+        RowBox[{
+         RowBox[{"RawBoxes", "[", "#", "]"}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"340", ",", "25"}], "}"}]}], ",", 
+         RowBox[{"Appearance", "\[Rule]", "\"\<FramedPalette\>\""}]}], "]"}], 
+       "&"}], "/@", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<GeometricPower[\[SelectionPlaceholder],\[Placeholder]]\>\"", ",", 
+        "\[IndentingNewLine]", 
+        "\"\<GeometricProductSeries[\[SelectionPlaceholder]]\>\"", ",", 
+        "\[IndentingNewLine]", 
+        "\"\<GeometricExp[\[SelectionPlaceholder]]\>\"", ",", 
+        "\[IndentingNewLine]", 
+        "\"\<GeometricSin[\[SelectionPlaceholder]]\>\"", ",", 
+        "\[IndentingNewLine]", 
+        "\"\<GeometricCos[\[SelectionPlaceholder]]\>\"", ",", 
+        "\[IndentingNewLine]", 
+        "\"\<GeometricTan[\[SelectionPlaceholder]]\>\""}], 
+       "\[IndentingNewLine]", "}"}]}], ",", "Center", ",", 
+     RowBox[{"Spacings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", ".1"}], "}"}]}]}], "]"}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.509021421833951*^9, {3.5090253814730043`*^9, 3.5090254820013185`*^9}, {
+   3.5090256747435827`*^9, 3.5090256783533754`*^9}, {3.632049275133497*^9, 
+   3.632049280948473*^9}, {3.632049472964512*^9, 3.632049474278183*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Create Palette", "Section",
+ CellChangeTimes->{{3.5090212943817267`*^9, 3.509021302337741*^9}, {
+  3.5090258189304667`*^9, 3.5090258300364637`*^9}, {3.5090282666999593`*^9, 
+  3.50902826701196*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CreatePalette", "[", 
+   RowBox[{
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Button", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<Clifford Algebra\>\"", ",", "20", ",", "Bold"}], "]"}], 
+        ",", 
+        RowBox[{"Appearance", "\[Rule]", "None"}], ",", 
+        RowBox[{"ImageSize", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"340", ",", "30"}], "}"}]}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"DynamicModule", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"opener1", "=", "True"}], ",", 
+          RowBox[{"opener2", "=", "False"}], ",", 
+          RowBox[{"opener3", "=", "False"}], ",", 
+          RowBox[{"opener4", "=", "False"}]}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Column", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"OpenerView", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Basic Operations\>\"", ",", "15"}], "]"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Column", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<Input and Options\>\"", ",", "11", ",", "Bold"}], 
+                    "]"}], ",", "basicOp1", ",", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Operations\>\"", ",", "11", ",", "Bold"}], 
+                    "]"}], ",", "basicOp2", ",", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Misc\>\"", ",", "12", ",", "Bold"}], "]"}], 
+                   ",", "basicOp3"}], "}"}], ",", 
+                 RowBox[{"Dividers", "\[Rule]", "True"}]}], "]"}]}], 
+              "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Dynamic", "[", 
+              RowBox[{"opener1", ",", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"opener1", "=", "True"}], ";", 
+                  RowBox[{"opener2", "=", "False"}], ";", 
+                  RowBox[{"opener3", "=", "False"}], ";", 
+                  RowBox[{"opener4", "=", "False"}]}], ")"}], "&"}]}], 
+              "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"OpenerView", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Geometric Transformations\>\"", ",", "15"}], 
+                "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"Column", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Functions\>\"", ",", "12", ",", "Bold"}], 
+                    "]"}], ",", "geomOp"}], "}"}], ",", 
+                 RowBox[{"Dividers", "\[Rule]", "True"}]}], "]"}]}], 
+              "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Dynamic", "[", 
+              RowBox[{"opener2", ",", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"opener2", "=", "#"}], ";", 
+                  RowBox[{"opener1", "=", "True"}], ";", 
+                  RowBox[{"opener3", "=", "False"}], ";", 
+                  RowBox[{"opener4", "=", "False"}]}], ")"}], "&"}]}], 
+              "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"OpenerView", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Quaternions\>\"", ",", "15"}], "]"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Column", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Basic Input\>\"", ",", "12", ",", "Bold"}], 
+                    "]"}], ",", "quatOp1", ",", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Operations\>\"", ",", "12", ",", "Bold"}], 
+                    "]"}], ",", "quatOp2"}], "}"}], ",", 
+                 RowBox[{"Dividers", "\[Rule]", "True"}]}], "]"}]}], 
+              "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Dynamic", "[", 
+              RowBox[{"opener3", ",", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"opener3", "=", "#"}], ";", 
+                  RowBox[{"opener1", "=", "True"}], ";", 
+                  RowBox[{"opener2", "=", "False"}], ";", 
+                  RowBox[{"opener4", "=", "False"}]}], ")"}], "&"}]}], 
+              "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"OpenerView", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Special Functions\>\"", ",", "15"}], "]"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Column", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Functions\>\"", ",", "12", ",", "Bold"}], 
+                    "]"}], ",", "specialOp"}], "}"}], ",", 
+                 RowBox[{"Dividers", "\[Rule]", "True"}]}], "]"}]}], 
+              "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Dynamic", "[", 
+              RowBox[{"opener4", ",", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"opener4", "=", "#"}], ";", 
+                  RowBox[{"opener1", "=", "True"}], ";", 
+                  RowBox[{"opener2", "=", "False"}], ";", 
+                  RowBox[{"opener3", "=", "False"}]}], ")"}], "&"}]}], 
+              "]"}]}], "]"}], ",", "\[IndentingNewLine]", "helpBLarge"}], 
+          "\[IndentingNewLine]", "}"}], "]"}]}], "\[IndentingNewLine]", 
+       "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+    RowBox[{"WindowTitle", "\[Rule]", "\"\<Palette\>\""}], ",", 
+    RowBox[{"WindowSize", "\[Rule]", "All"}]}], "]"}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.509025835209553*^9, 3.509025913416439*^9}, {
+  3.509025948059537*^9, 3.509026159064742*^9}, {3.509026231608511*^9, 
+  3.509026249207259*^9}, {3.509026280860793*^9, 3.5090263245201826`*^9}, {
+  3.509026358930064*^9, 3.5090263770560665`*^9}, {3.509026473827566*^9, 
+  3.509026564563169*^9}, {3.5090266014557962`*^9, 3.5090266473873196`*^9}, {
+  3.509026748753461*^9, 3.509026762369809*^9}, {3.5090269392354755`*^9, 
+  3.5090270048060703`*^9}, {3.5090270451158752`*^9, 3.5090270522648706`*^9}, {
+  3.509027446998807*^9, 3.509027447262822*^9}, {3.509027541175969*^9, 
+  3.509027544251334*^9}, {3.5090275779089837`*^9, 3.5090276524432807`*^9}, {
+  3.509027685252898*^9, 3.509027756524858*^9}, {3.5090279799637456`*^9, 
+  3.5090280009409065`*^9}, {3.5090281367684155`*^9, 3.509028164064642*^9}, {
+  3.5090293239766045`*^9, 3.509029325155672*^9}, {3.509029399765939*^9, 
+  3.5090294213541737`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1052, 564},
+WindowMargins->{{23, Automatic}, {106, Automatic}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->FrontEnd`FileName[{"Utility"}, "Memo.nb", CharacterEncoding -> 
+  "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 123, 1, 92, "Title"],
+Cell[693, 25, 239, 9, 139, "Text"],
+Cell[935, 36, 193, 4, 32, "Text"],
+Cell[CellGroupData[{
+Cell[1153, 44, 151, 2, 55, "Section"],
+Cell[1307, 48, 1828, 34, 408, "Text",
+ CellGroupingRules->"NormalGrouping"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3172, 87, 151, 2, 55, "Section"],
+Cell[3326, 91, 165, 3, 45, "Text"],
+Cell[3494, 96, 1337, 28, 104, "Input",
+ InitializationCell->True],
+Cell[4834, 126, 117, 2, 45, "Text"],
+Cell[4954, 130, 4955, 105, 403, "Input",
+ InitializationCell->True],
+Cell[9912, 237, 179, 3, 45, "Text"],
+Cell[10094, 242, 1925, 42, 182, "Input",
+ InitializationCell->True],
+Cell[12022, 286, 138, 3, 45, "Text"],
+Cell[12163, 291, 2536, 63, 199, "Input",
+ InitializationCell->True],
+Cell[14702, 356, 134, 3, 45, "Text"],
+Cell[14839, 361, 1525, 36, 148, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16401, 402, 204, 3, 55, "Section"],
+Cell[16608, 407, 7365, 159, 437, "Input",
+ InitializationCell->True]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
