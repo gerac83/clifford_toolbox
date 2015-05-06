@@ -38,6 +38,7 @@ if nargin > 3
     r = sin(theta/2) * (plano / Magnitude(plano));
     r = GAarithmetic('plus', cos(theta/2), r);
 else
+    [w, x] = setDimensions(w, x,  size(w), size(x));
     theta = InnerProduct(w,x)/(Magnitude(w)*Magnitude(x));
     theta = theta(1);
     r = sqrt((1-theta)/2) * (plano / Magnitude(plano));

@@ -25,10 +25,10 @@ for i = 1:sizMat(1)
         if idx == 1 % Scalar case
             strTemp = num2str(coeff);
         else % 1-blade case
-            if abs(coeff) > 1 || abs(coeff) < 1
+            if abs(coeff) - eps ~= 1.0
                 strTemp = [num2str(coeff) 'e' num2str(idx-1)];
             else
-                if coeff == -1
+                if coeff < 0
                     strTemp = ['-e' num2str(idx-1)];
                 else
                     strTemp = ['e' num2str(idx-1)];

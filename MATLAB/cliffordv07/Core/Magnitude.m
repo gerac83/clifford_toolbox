@@ -8,3 +8,4 @@ function out = Magnitude(m)
 % Aragon J. L. & Rodriguez-Andrade, M. A.
 
 out = sqrt(Grade(GeometricProduct(m, Turn(m)), 0));
+out = out(1);
