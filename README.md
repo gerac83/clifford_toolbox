@@ -1,5 +1,7 @@
 # Clifford Toolbox for Mathematica and Matlab
 
+# This toolbox has been superseeded by: [https://github.com/jlaragonvera/Geometric-Algebra](https://github.com/jlaragonvera/Geometric-Algebra)
+
 **Authors:**
 [Aragón-Camarasa, G.](https://github.com/gerac83), [Aragón-González, G.](https://scholar.google.co.uk/citations?user=kRY33gQAAAAJ&hl=en), [Aragon J. L.](http://www.fata.unam.mx/web/?q=node/6) and [Rodriguez-Andrade, M. A.](https://scholar.google.co.uk/citations?user=lkR2_C0AAAAJ&hl=en)
 
